@@ -17,7 +17,6 @@ var expect = function(val) {
     };
 };
 
-// Example 1
 try {
     const result = expect(5).toBe(5);
     console.log({ value: result }); // { value: true }
@@ -25,7 +24,6 @@ try {
     console.log({ error: e.message });
 }
 
-// Example 2
 try {
     const result = expect(5).toBe(null);
     console.log({ value: result });
@@ -33,7 +31,6 @@ try {
     console.log({ error: e.message }); // { error: "Not Equal" }
 }
 
-// Example 3
 try {
     const result = expect(5).notToBe(null);
     console.log({ value: result }); // { value: true }
