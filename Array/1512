@@ -1,0 +1,21 @@
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        // Frequency array since nums[i] is in the range [1,100]
+        int[] freq = new int[101];  
+        
+        // Step 1: Count frequency of each number
+        for (int num : nums) {
+            freq[num]++;
+        }
+        
+        int count = 0;
+        // Step 2: For each frequency, calculate number of good pairs
+        for (int f : freq) {
+            if (f > 1) {
+                count += (f * (f - 1)) / 2;
+            }
+        }
+        
+        return count;
+    }
+}
